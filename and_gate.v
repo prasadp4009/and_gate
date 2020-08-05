@@ -14,16 +14,21 @@ module and_gate
   input  wire reset,
   input  wire a,
   input  wire b,
-  output reg  y
+  output wire y
 );
 
+localparam reset_value = 0;
+reg [0:0]y_out;
+  
 always @(posedge clk) begin
   if (reset) begin
-    y <= 0;
+    y_out <= reset_value;
   end
   else begin
-      y <= a & b;
+      y_out <= a & b;
   end
 end
 
+assign y = y_out;
+  
 endmodule

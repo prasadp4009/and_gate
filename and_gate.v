@@ -17,7 +17,7 @@ module and_gate
   output reg  y
 );
 
-always @(posedge clk or posedge reset) begin
+always @(posedge clk) begin
   if (reset) begin
     y <= 0;
   end

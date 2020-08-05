@@ -25,3 +25,5 @@ always @(posedge clk or posedge reset) begin
       y <= a & b;
   end
 end
+
+endmodule
